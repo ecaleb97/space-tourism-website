@@ -1,0 +1,75 @@
+---
+import "@fontsource/bellefair";
+import "@fontsource/barlow"
+import "@fontsource/barlow-condensed"
+
+interface Props {
+  title: string;
+  description: string;
+  distance: string;
+  travel: string;
+}
+
+const { title, description, distance, travel } = Astro.props;
+---
+
+<article 
+  class="text-center my-8 flex
+  flex-col gap-y-4"
+>
+  <header>
+    <h1 
+      class="bellefair text-white uppercase text-6xl"
+    >
+      {title}
+    </h1>
+  </header>
+  <p 
+    class="barlow text-primary text-lg leading-8"
+  >
+    {description}
+  </p>
+  <hr class="border-[1px] border-[#383B4B] my-6" />
+  <footer class="flex flex-col gap-y-8">
+    <div>
+      <span class="barlow-c text-primary block
+      text-lg tracking-widest pb-2">
+        AVG. DISTANCE
+      </span>
+      <span 
+        class="bellefair uppercase text-white
+        text-4xl"
+      >
+        {distance}
+      </span>
+    </div>
+    <div>
+      <span 
+        class="barlow-c text-primary block
+        text-lg tracking-widest pb-2"
+      >
+        EST. TRAVEL TIME
+      </span>
+      <span 
+        class="bellefair uppercase text-white
+        text-4xl"
+      >
+        {travel}
+      </span>
+    </div>
+  </footer>
+</article>
+
+<style>
+  .bellefair {
+    font-family: 'Bellefair', serif;
+  }
+
+  .barlow-c {
+    font-family: 'Barlow Condensed', sans-serif;
+  }
+
+  .barlow {
+    font-family: 'Barlow', sans-serif;
+  }
+</style>

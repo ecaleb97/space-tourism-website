@@ -1,0 +1,77 @@
+---
+import Logo from "@/icons/Logo.astro"
+import Hamburger from "@/icons/Hamburger.astro"
+import Close from "@/icons/Close.astro"
+
+import "@fontsource/barlow-condensed"
+---
+
+<header class="px-6 py-5">
+  <div class="flex justify-between items-center">
+    <Logo />
+    <button class="open-menu">
+      <Hamburger />
+    </button>
+  </div>
+  <nav 
+    class="nav-mobile hidden bg-[#979797]/30
+    fixed top-0 right-0 bottom-0 backdrop-blur-lg
+    px-6 py-5 z-50 w-[300px]"
+  >
+    <button 
+      class="close-menu py-3 w-full
+      flex justify-end"
+    >
+      <Close />
+    </button>
+    <ul class="flex flex-col my-16 gap-y-8">
+      <li class="mx-4">
+        <span class="font-bold mr-3">00</span>
+        <a href="/">HOME</a>
+      </li>
+      <li class="mx-4">
+        <span class="font-bold mr-3">01</span>
+        <a href="/destination/moon">DESTINATION</a>
+      </li>
+      <li class="mx-4">
+        <span class="font-bold mr-3">02</span>
+        <a href="#">CREW</a>
+      </li>
+      <li class="mx-4">
+        <span class="font-bold mr-3">03</span>
+        <a href="#">TECHNOLOGY</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  header {
+    font-family: 'Barlow Condensed', sans-serif;
+    color: white;
+    font-size: 1.4rem;
+    letter-spacing: .15rem;
+  }
+
+  span {
+    font-weight: 700;
+  }
+
+  a {
+    font-weight: 300;
+  }
+</style>
+
+<!-- <script>
+  const open = document.querySelector('.open-menu')
+  const close = document.querySelector('.close-menu')
+  const nav = document.querySelector('.nav-mobile')
+
+  open?.addEventListener('click', () => {
+    nav?.classList.toggle('hidden');
+  })
+
+  close?.addEventListener('click', () => {
+    nav?.classList.toggle('hidden');
+  })
+</script> -->

@@ -1,0 +1,43 @@
+---
+import { Image } from "astro:assets";
+import Layout from "@/layouts/Layout.astro";
+import SectionHeading from "@/components/SectionHeading.astro";
+import NavDestinations from "@/components/NavDestinations.astro";
+import Destination from "@/sections/Destination.astro";
+
+import mars from "@/assets/destination/image-mars.webp"
+import { destinations } from "@data"
+
+const { name, description, distance, travel } = destinations[1];
+
+---
+
+<Layout 
+  pageTitle="Destinations | Mars"
+  className=`
+    bg-destination-mobile md:bg-destination-tablet
+    bg-cover bg-no-repeat
+    xl:bg-destination-desktop w-screen min-h-screen
+  `
+>
+  <SectionHeading
+    sectionNumber={"01"}
+    sectionTitle="PICK YOUR DESTINATION"
+  />
+  <Image
+    src={mars}
+    alt={name}
+    width={170}
+    height={170}
+    class={"aspect-square object-cover mx-auto my-8"}
+  />
+
+  <NavDestinations />
+
+  <Destination
+    title={name}
+    description={description}
+    distance={distance}
+    travel={travel}
+  />
+</Layout>

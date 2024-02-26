@@ -1,0 +1,28 @@
+---
+import "@fontsource/barlow-condensed/400.css"
+
+interface Props {
+  sectionNumber: string;
+  sectionTitle: string;
+}
+
+const { sectionTitle, sectionNumber } = Astro.props;
+---
+
+<h2 class="text-white text-center
+  text-pretty tracking-widest"
+>
+  <span class="font-bold pr-4">{sectionNumber}</span>
+  {sectionTitle}
+</h2>
+
+<style>
+  h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.3rem;
+  }
+
+  span {
+    color: #56565D;
+  }
+</style>
