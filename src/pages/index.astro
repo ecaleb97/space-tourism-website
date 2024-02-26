@@ -1,15 +1,19 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import Hero from "@/sections/Hero.astro";
+import backgroundMobile from "@/assets/home/background-home-mobile.jpg"
 ---
 
 <Layout
   pageTitle="Space Tourism"
-  className=`
-		bg-main-mobile md:bg-main-tablet
-		bg-cover bg-no-repeat
-		xl:bg-main-desktop w-screen min-h-screen
-	`
+  className="bg-main-mobile md:bg-main-tablet bg-cover bg-no-repeat xl:bg-main-desktop w-screen min-h-screen"
 >
   <Hero />
 </Layout>
+
+<!-- <style>
+	.background {
+		background-image: url(${backgroundMobile});
+	}
+</style>
+ -->
