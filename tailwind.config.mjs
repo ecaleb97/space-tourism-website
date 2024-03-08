@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-const BASE_URL = '/src/assets/';
+const BASE_URL = '/src/assets';
 
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
@@ -13,9 +13,9 @@ export default {
 				'destination-desktop': "url('/src/assets/destination/background-destination-desktop.jpg')",
 				'destination-mobile': "url('/src/assets/destination/background-destination-mobile.jpg')",
 				'destination-tablet': "url('/src/assets/destination/background-destination-tablet.jpg')",
-				'technology-desktop': `url(${BASE_URL}technology/background-technology-desktop.jpg)`,
-				'technology-mobile': `url(${BASE_URL}technology/background-technology-mobile.jpg)`,
-				'technology-tablet': `url(${BASE_URL}technology/background-technology-tablet.jpg)`,
+				'technology-desktop': `url(${BASE_URL}/technology/background-technology-desktop.jpg)`,
+				'technology-mobile': `url(${BASE_URL}/technology/background-technology-mobile.jpg)`,
+				'technology-tablet': `url(${BASE_URL}/technology/background-technology-tablet.jpg)`,
 			},
 			colors: {
 				primary: '#D0D6F9'
