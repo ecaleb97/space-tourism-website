@@ -1,13 +1,13 @@
 ---
 import Layout from "@/layouts/Layout.astro"
 import SectionHeading from "@/components/SectionHeading.astro"
-import { Image } from "astro:assets";
-import launchVehicle from "@/assets/technology/image-launch-vehicle-landscape.jpg"
-import { technology } from "@data";
-import Selector from "@/components/Selector.astro"
 import Technology from "@/sections/Technology.astro"
+import Selector from "@/components/Selector.astro"
+import { technology } from "@data"
+import spaceport from "@/assets/technology/image-spaceport-landscape.jpg"
+import { Image } from "astro:assets"
 
-const { name, description } = technology[0]
+const { name, description } = technology[1]
 ---
 
 <Layout 
@@ -24,7 +24,7 @@ const { name, description } = technology[0]
   />
 
   <Image
-    src={launchVehicle}
+    src={spaceport}
     alt={name}
     class={"image"}
   />

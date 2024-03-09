@@ -2,12 +2,12 @@
 import Layout from "@/layouts/Layout.astro"
 import SectionHeading from "@/components/SectionHeading.astro"
 import { Image } from "astro:assets";
-import launchVehicle from "@/assets/technology/image-launch-vehicle-landscape.jpg"
+import spaceCapsule from "@/assets/technology/image-space-capsule-landscape.jpg"
 import { technology } from "@data";
 import Selector from "@/components/Selector.astro"
 import Technology from "@/sections/Technology.astro"
 
-const { name, description } = technology[0]
+const { name, description } = technology[2]
 ---
 
 <Layout 
@@ -24,7 +24,7 @@ const { name, description } = technology[0]
   />
 
   <Image
-    src={launchVehicle}
+    src={spaceCapsule}
     alt={name}
     class={"image"}
   />

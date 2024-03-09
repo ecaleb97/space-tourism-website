@@ -1,0 +1,46 @@
+---
+import "@fontsource/barlow-condensed"
+import "@fontsource/bellefair"
+import "@fontsource/barlow"
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<div class="my-8 mx-4">
+  <h3
+    class="barlow-c text-white text-center pb-2"
+  >
+    THE TERMINOLOGY...
+  </h3>
+  <h1
+    class="bellefair text-white text-3xl uppercase 
+    text-center pb-4"
+  >
+    {title}
+  </h1>
+  <p 
+    class="barlow text-primary tracking-wider leading-7
+    text-center text-pretty"
+  >
+    {description}
+  </p>
+</div>
+
+<style>
+  .barlow {
+    font-family: 'Barlow', sans-serif;
+  }
+
+  .bellefair {
+    font-family: 'Bellefair', serif;
+  }
+
+  .barlow-c {
+    font-family: 'Barlow Condensed', sans-serif;
+  }
+</style>
