@@ -1,0 +1,46 @@
+---
+import Layout from "@/layouts/Layout.astro"
+import SectionHeading from "@/components/SectionHeading.astro"
+import Crew from "@/sections/Crew.astro"
+import commander from "@/assets/crew/image-douglas-hurley.webp"
+import { crew } from "@data"
+import { Image } from "astro:assets"
+
+const { name, bio, role } = crew[0];
+---
+
+<Layout 
+  pageTitle="Douglas Hurley"
+  className=`
+  bg-crew-mobile md:bg-crew-tablet
+  bg-cover bg-no-repeat
+  xl:bg-crew-desktop w-screen h-screen`
+>
+  <SectionHeading
+    sectionNumber="02"
+    sectionTitle="MEET YOUR CREW"
+  />
+
+  <Image
+    src={commander}
+    alt={name}
+    width={200}
+    height={200}
+    class={"image my-8"}
+    loading={"eager"}
+  />
+
+  <Crew
+    name={name}
+    bio={bio}
+    role={role}
+  />
+</Layout>
+
+<style>
+  .image {
+    aspect-ratio: 130 / 177;
+    object-fit: cover;
+  }
+</style>
+

@@ -1,0 +1,43 @@
+---
+import "@fontsource/barlow"
+import "@fontsource/bellefair"
+
+interface Props {
+  name: string;
+  bio: string;
+  role: string;
+}
+
+const { name, bio, role } = Astro.props;
+---
+
+<div class="mx-4 text-center">
+  <h3 
+    class="bellefair uppercase text-balance pb-2 text-lg
+    text-[#56565d]"
+  >
+    {role}
+  </h3>
+  <h1 
+    class="bellefair uppercase text-balance pb-4 text-3xl
+    text-white"
+  >
+    {name}
+  </h1>
+  <p 
+    class="barlow text-primary text-pretty tracking-wider
+    leading-7"
+  >
+    {bio}
+  </p>
+</div>
+
+<style>
+  .bellefair {
+    font-family: 'Bellefair', serif;
+  }
+
+  .barlow {
+    font-family: 'Barlow', sans-serif;
+  }
+</style>
