@@ -6,7 +6,7 @@ export interface Space {
 
 export interface Crew {
   name:   string;
-  images: CrewImages;
+  images?: CrewImages;
   role:   string;
   bio:    string;
 }
