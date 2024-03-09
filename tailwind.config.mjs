@@ -16,6 +16,9 @@ export default {
 				'technology-desktop': `url(${BASE_URL}/technology/background-technology-desktop.jpg)`,
 				'technology-mobile': `url(${BASE_URL}/technology/background-technology-mobile.jpg)`,
 				'technology-tablet': `url(${BASE_URL}/technology/background-technology-tablet.jpg)`,
+				'crew-desktop': `url(${BASE_URL}/crew/background-crew-desktop.jpg)`,
+				'crew-mobile': `url(${BASE_URL}/crew/background-crew-mobile.jpg)`,
+				'crew-tablet': `url(${BASE_URL}/crew/background-crew-tablet.jpg)`,
 			},
 			colors: {
 				primary: '#D0D6F9'
